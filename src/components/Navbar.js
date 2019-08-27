@@ -15,7 +15,7 @@ const Navbar = props => {
     return (
         <div>
             <nav className="navbar navbar-expand-lg mb-5 fixed-top scrolling-navbar" >
-                <Link className="navbar-brand" to="/"><img alt="pokeball" src="/assets/pokeball.PNG" className="companyLogo" /> PoKeMMerce <p className="subBanner m-0">We hunt, You fight!</p></Link>
+                <Link className="navbar-brand" to="/"><img alt="pokeball" src="/assets/pokeball.png" className="companyLogo" /> PoKeMMerce <p className="subBanner m-0">We hunt, You fight!</p></Link>
 
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon">

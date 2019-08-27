@@ -5,7 +5,7 @@ export const addOrder = payload => dispatch => {
     dispatch({
         type: "IS_LOADING"
     })
-    axios.post("http://localhost:5000/orders", payload).then(res => {
+    axios.post("https://pokemmerce-backend.herokuapp.com/orders", payload).then(res => {
         toast.success("Pokemon added to cart")
         dispatch({
             type: "ADD_ORDER_SUCCESS",
@@ -27,7 +27,7 @@ export const getOrders = () => (dispatch, getState) => {
     dispatch({
         type: "IS_LOADING"
     })
-    axios.get("http://localhost:5000/orders").then(res => {
+    axios.get("https://pokemmerce-backend.herokuapp.com/orders").then(res => {
         dispatch({
             type: "GET_ORDERS_SUCCESS",
             payload: {orders: res.data.orders, userId}
@@ -42,7 +42,7 @@ export const getOrders = () => (dispatch, getState) => {
 }
 
 export const deleteOrder = id => dispatch => {
-    axios.delete(`http://localhost:5000/orders/${id}`).then(res => {
+    axios.delete(`https://pokemmerce-backend.herokuapp.com/orders/${id}`).then(res => {
         toast.success("Pokemon removed from cart")
         dispatch({
             type: "DELETE_ORDER_SUCCESS",

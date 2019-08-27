@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const getItems = () => dispatch => {
-    axios.get("http://localhost:5000/items").then(res => {
+    axios.get("https://pokemmerce-backend.herokuapp.com/items").then(res => {
         dispatch({
             type: "GET_ITEMS",
             payload: res.data.items
@@ -13,7 +13,7 @@ export const getItems = () => dispatch => {
 }
 
 export const getOneItem = id => dispatch => {
-    axios.get(`http://localhost:5000/items/${id}`).then(res => {
+    axios.get(`https://pokemmerce-backend.herokuapp.com/items/${id}`).then(res => {
         dispatch({
             type: "GET_ONE_ITEM",
             payload: res.data
@@ -25,7 +25,7 @@ export const getOneItem = id => dispatch => {
 }
 
 export const deleteItem = id => dispatch => {
-    axios.delete(`http://localhost:5000/items/${id}`).then(res => {
+    axios.delete(`https://pokemmerce-backend.herokuapp.com/items/${id}`).then(res => {
         dispatch({
             type: "DELETE_ITEM",
             payload: {id, msg: res.data.msg}
@@ -47,7 +47,7 @@ export const addItem = payload => dispatch => {
          data.append('description',description);
          data.append('category',category);
 
-    axios.post('http://localhost:5000/items', data).then(res => {
+    axios.post('https://pokemmerce-backend.herokuapp.com/items', data).then(res => {
         console.log(res.data)
         dispatch({
             type: "ADD_ITEM",
@@ -68,7 +68,7 @@ export const editForm = (name,value) => dispatch => {
 
 export const updateItem = data => dispatch => {
     if(typeof data.image === "string"){
-        axios.put(`http://localhost:5000/items/${data._id}`, data).then(res=>{
+        axios.put(`https://pokemmerce-backend.herokuapp.com/items/${data._id}`, data).then(res=>{
             dispatch({
                 type: "UPDATE_ITEM",
                 payload: res.data
@@ -86,7 +86,7 @@ export const updateItem = data => dispatch => {
         dataUpload.append('description',data.description);
         dataUpload.append('category',data.category);
 
-        axios.put(`http://localhost:5000/items/${data._id}`, dataUpload).then(res=>{
+        axios.put(`https://pokemmerce-backend.herokuapp.com/items/${data._id}`, dataUpload).then(res=>{
             dispatch({
                 type: "UPDATE_ITEM",
                 payload: res.data

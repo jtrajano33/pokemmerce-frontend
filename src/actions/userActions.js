@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export const signUp = payload => dispatch => {
     dispatch({type: "IS_LOADING_REGISTRATION"})
-    axios.post("http://localhost:5000/api/user", payload).then(res => {
+    axios.post("https://pokemmerce-backend.herokuapp.com/api/user", payload).then(res => {
         dispatch({
             type: "SIGN_UP_SUCCESS",
             payload: res.data
@@ -19,7 +19,7 @@ export const signUp = payload => dispatch => {
 
 export const signIn = payload => dispatch => {
     dispatch({type: "IS_LOADING_LOGIN"})    
-    axios.post("http://localhost:5000/api/auth", payload).then(res => {
+    axios.post("https://pokemmerce-backend.herokuapp.com/api/auth", payload).then(res => {
         dispatch({
             type: "LOGIN_SUCCESS",
             payload: res.data

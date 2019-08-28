@@ -100,7 +100,7 @@ class CartPage extends React.Component {
                     </div>
                 </div>
 
-                <div style={{position: 'relative', top: "55px"}}>
+                <div style={{position: 'relative', top: "55px"}} className="cartFooter">
                     <Footer />
                 </div>
 

@@ -32,7 +32,7 @@ class ProductModal extends React.Component {
                   </div>
                 </div>
                 <div className="col-md-6 col-lg-6 text-left" style={{ fontSize: '14px' }}>
-                  <p><span className="font-weight-bold">Name: </span>{item.name}</p>
+                  <p className="itemNameMobile"><span className="font-weight-bold">Name: </span>{item.name}</p>
                   <p><span className="font-weight-bold">Date Caught: </span>{moment(item.createdAt).calendar()}</p>
                   <p className="text-justify"><span className="font-weight-bold">Description: </span>{item.description}</p>
                   <p><span className="font-weight-bold">Price: </span>$ {item.price.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>

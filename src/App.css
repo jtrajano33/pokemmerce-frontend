@@ -169,5 +169,12 @@ tr{
   .summaryMobile{
     margin-top: 40px
   }
+
+  .cartFooter{
+    display: none;
+  }
+  .itemNameMobile{
+    margin-top: 0.5rem
+  }
 }
 

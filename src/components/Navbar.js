@@ -19,7 +19,7 @@ const Navbar = props => {
 
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon">
-                        <i className="fa fa-chevron-down nav-image-icon" style={{transform: "scale(1.3)"}}></i>
+                        <i className="fa fa-chevron-down nav-image-icon" style={{transform: "scale(1.2)"}}></i>
                     </span>
                 </button>
 
